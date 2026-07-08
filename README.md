@@ -94,12 +94,15 @@ requirements.txt
 
 - I will make some graphs to show how well the neural network was trained and how well it predicted
 
+
+
+## Regression Demo
+
+![Regression Demo](images/regression_demo.png)
+
 ---
 
 ## Author
 
 Le Duc Minh
-=======
-# quantum-inspired
-This project implements a multilayer perceptron entirely from first principles using NumPy, without machine learning frameworks. The goal is to establish a classical baseline before investigating quantum-inspired feature mappings for forecasting tasks.
->>>>>>> 68c842675167b122f143938336bdb1e584f9a7fe
+
