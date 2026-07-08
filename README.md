@@ -36,7 +36,7 @@ I am doing this project on my own as part of my research portfolio.
 
 - [x] I trained the network, on the XOR benchmark and it worked
 
-- [ ] I still need to train the network on some regression datasets
+- [x] I still need to train the network on some regression datasets
 
 - [ ] I still need to add the quantum-inspired feature mapping
 

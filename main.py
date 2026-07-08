@@ -1,19 +1,20 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 def sigmoid(z):
     return 1/(1+np.exp(-z))
 
 
-def initialize_parameters():
+def initialize_parameters(input_size, hidden_size, output_size):
 
     np.random.seed(42)
 
     parameters = {
-        "W1" : np.random.randn(2,5) * 0.5,
-        "b1" : np.zeros((1,5)),
+        "W1" : np.random.randn(input_size, hidden_size) * 0.3,
+        "b1" : np.zeros((1, hidden_size)),
 
-        "W2" : np.random.randn(5,1) * 0.5,
-        "b2": np.zeros((1,1))
+        "W2" : np.random.randn(hidden_size,output_size) * 0.3,
+        "b2": np.zeros((1,output_size))
     }
 
     return parameters
@@ -28,7 +29,7 @@ def forward(X, parameters):
     Z1 = (X @ W1) + b1
     A1 = sigmoid(Z1)
     Z2 = (A1 @ W2) + b2
-    A2 = sigmoid(Z2)
+    A2 = Z2
 
     cache = {
         "Z1": Z1,
@@ -50,7 +51,7 @@ def backward(X, Y, parameters, cache):
 
     A1 = cache["A1"]
     A2 = cache["A2"]
-    delta2 = (A2 - Y) * A2 * (1 - A2)
+    delta2 = (A2 - Y)
 
     m = X.shape[0]
 
@@ -67,7 +68,11 @@ def backward(X, Y, parameters, cache):
         "db2": db2
     }
     return gradients
-parameters = initialize_parameters()
+parameters = initialize_parameters(
+    input_size = 1,
+    hidden_size = 3,
+    output_size= 1
+)
 
 def update(parameters, gradients):
     learning_rate = 0.5
@@ -80,20 +85,9 @@ def update(parameters, gradients):
 
     return parameters
 
-X = np.array([
-    [0, 0],
-    [0, 1],
-    [1, 0],
-    [1, 1]
-])
-
-Y = np.array([
-    [0],
-    [1],
-    [1],
-    [0]
-])
-for epoch in range(90000):
+X = np.linspace(-2, 2, 200).reshape(-1,1)
+Y = X**2
+for epoch in range(1000):
 
     A2, cache = forward(X, parameters)
     print(A2)
@@ -105,3 +99,9 @@ for epoch in range(90000):
 
     parameters = update(parameters, gradients)
     print(epoch, loss)
+
+plt.scatter(X, Y, label="True data")
+plt.plot(X, A2, label="Prediction")
+
+plt.legend()
+plt.show()
