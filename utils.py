@@ -5,5 +5,5 @@ def plot_prediction(Y, predictions):
     plt.plot(predictions, label="Prediction")
 
     plt.legend()
-    plt.savefig("images/regression_demo.png")
+    plt.savefig("images/sine_prediction.png")
     plt.show()

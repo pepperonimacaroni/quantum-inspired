@@ -31,7 +31,7 @@ I am doing this project on my own as part of my research portfolio.
 - [x] Gradient descent
 - [x] XOR classification
 - [x] Regression (learning y = x²)
-- [ ] Time-series forecasting
+- [x] Time-series forecasting
 - [ ] Quantum-inspired feature mapping
 - [ ] Experimental evaluation
 
@@ -67,7 +67,7 @@ I am doing this project on my own as part of my research portfolio.
 ## Regression Demo
 
 ![Regression Demo](images/regression_demo.png)
-
+![Sine-wave Prediction](image/sine_prediction.png)
 ---
 
 ## Author

@@ -5,6 +5,7 @@ def load_sequence():
     data = np.sin(x)
     return data
 
+#Regression Demo:
 def data_creation():
     X = np.linspace(-2, 2, 200).reshape(-1, 1)
     Y = X ** 2
