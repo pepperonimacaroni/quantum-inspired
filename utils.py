@@ -10,5 +10,6 @@ def plot_prediction(Y, predictions):
 
 def plot_loss(losses):
     plt.plot(losses, label="Losses")
+
     plt.savefig("images/losses.png")
     plt.show()

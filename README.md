@@ -67,7 +67,11 @@ I am doing this project on my own as part of my research portfolio.
 ## Progression Graphs
 
 ![Regression Demo](images/regression_demo.png)
-![Sine-wave Prediction](image/sine_prediction.png)
+![Sine-wave Prediction](images/sine_prediction.png)
+
+## Losses Graphs
+
+![Losses Stock Forecast](images/losses.png)
 ---
 
 ## Author
